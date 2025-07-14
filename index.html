@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Araç Sahibi IBAN Bilgilendirme</title>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .logo img {
+      width: 220px;
+      height: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #003366;
+      font-size: 20px;
+    }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: #f0f0f0;
+      color: #555;
+    }
+    input[readonly], textarea[readonly] {
+      cursor: not-allowed;
+    }
+    @media (max-width: 600px) {
+      .container {
+        margin: 15px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body style="background-color: #ffffff; margin: 0; font-family: Arial, sans-serif;background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='1000' height='300'&gt;&lt;text x='50%' y='50%' font-size='80' fill='%23eeeeee' font-family='Arial' opacity='0.4' text-anchor='middle' dominant-baseline='middle'&gt;TAKASBANK&lt;/text&gt;&lt;/svg&gt;&quot;); background-repeat: no-repeat; background-position: center;">
+<div class="container" style="max-width: 700px; margin: 60px auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.08); text-align:left;"><img alt="Taşıt Takas Logo" src="logo-tasit-takas.webp" style="width: 100%; max-width: 100%; height: auto; display: block; margin-bottom: 30px;"/>
+<div id="countdown" style="text-align:center; font-size:22px; color:#b30000; font-weight:bold; margin-bottom:20px;">Kalan süre: 03:00</div><div class="logo">
+
+</div>
+<h2>Araç Sahibi IBAN Bilgilendirme</h2><div style="margin-top:30px; padding:20px; background:#f1f5f9; border:1px solid #ccc; border-radius:10px; font-size:14px;">
+<h3 style="color:#003366; margin-top:0;">Güvenli Ödeme Bilgilendirmesi</h3><ul style="list-style:none; padding:0; font-size:15px; line-height:1.8;"><li><span style="font-weight:600; color:#002f5f; display:inline-block; min-width:140px; user-select: text;">Platform:</span><span style="color:#333; user-select: text;">Takasbank Kamu Teminat Yönetim Sistemi</span></li><li><span style="font-weight:600; color:#002f5f; display:inline-block; min-width:140px; user-select: text;">İşlem Türü:</span><span style="color:#333; user-select: text;">Elektronik Teminat / Güvenli Ödeme</span></li><li><span style="font-weight:600; color:#002f5f; display:inline-block; min-width:140px; user-select: text;">IBAN Sahibi:</span><span style="color:#333; user-select: text;">Mevlüt Keser</span></li><li><span style="font-weight:600; color:#002f5f; display:inline-block; min-width:140px; user-select: text;">IBAN No:</span><span style="color:#333; user-select: text;">TR12 0001 0000 1234 5678 9101 00</span></li><li><span style="font-weight:600; color:#002f5f; display:inline-block; min-width:140px; user-select: text;">Açıklama:</span><span style="color:#333; user-select: text;">Araç Satış Güvenli Ödeme İşlemi</span></li></ul>
+
+
+</div>
+<label>Ad Soyad</label>
+<input readonly="" type="text" value="Mevlüt Keser"/>
+<label>ARAÇ SAHİBİ IBAN BİLGİLERİ</label>
+<input readonly="" type="text" value="TR12 0001 0000 1234 5678 9101 00"/>
+<label>Araç Plaka</label>
+<input readonly="" type="text" value="07BKL585"/>
+<label>Açıklama</label>
+<textarea readonly="" rows="3">araç plakasının satış bedeli</textarea>
+<p style="font-size:13px; color:#555; margin-top:25px;">Bu belge, Takasbank sisteminde oluşturulmuş güvenli ödeme işlemine ait bilgilendirme amaçlıdır.</p><p style="font-size:13px; color:#444; margin-top:25px; text-align:center;">Bu sayfa, Takasbank güvenli ödeme bilgilendirmesi amacıyla hazırlanmıştır.</p></div>
+<script>
+<script>
+  let duration = 180;
+  const countdownEl = document.getElementById("countdown");
+
+  function updateCountdown() {
+    const minutes = String(Math.floor(duration / 60)).padStart(2, '0');
+    const seconds = String(duration % 60).padStart(2, '0');
+    countdownEl.textContent = `Kalan süre: ${minutes}:${seconds}`;
+    if (duration > 0) {
+      duration--;
+      setTimeout(updateCountdown, 1000);
+    } else {
+      countdownEl.textContent = "Süre doldu!";
+    }
+  }
+
+  window.onload = updateCountdown;
+</script>
+<script>
+let duration = 180;
+const countdownEl = document.getElementById("countdown");
+
+function updateCountdown() {
+  const minutes = String(Math.floor(duration / 60)).padStart(2, '0');
+  const seconds = String(duration % 60).padStart(2, '0');
+  countdownEl.textContent = `Kalan süre: ${minutes}:${seconds}`;
+  if (duration > 0) {
+    duration--;
+    setTimeout(updateCountdown, 1000);
+  } else {
+    countdownEl.textContent = "Süre doldu!";
+  }
+}
+window.onload = updateCountdown;
+</script><div style="position: fixed; bottom: 15px; left: 15px; font-size: 16px; font-weight: bold; color: #003366; background: #f0f4f8; padding: 6px 12px; border-radius: 6px; box-shadow: 0 0 5px rgba(0,0,0,0.1);">İşlem Tarihi: 14.07.2025</div></body>
+</html>
